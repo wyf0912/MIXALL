@@ -37,3 +37,13 @@ for (x,y) in iterDomainBatch:
     loss.backward()
     optimizer.step()
 ```
+Please cite our paper if you find it is useful.
+
+    @inproceedings{wang2020heterogeneous,
+      title={Heterogeneous Domain Generalization Via Domain Mixup},
+      author={Wang, Yufei and Li, Haoliang and Kot, Alex C},
+      booktitle={ICASSP 2020-2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+      pages={3622--3626},
+      year={2020},
+      organization={IEEE}
+    }
