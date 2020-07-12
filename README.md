@@ -5,6 +5,7 @@ A **simple** but **effective** way to improve the heterogeneous domain generaliz
 
 The [paper](https://github.com/wyf0912/Heterogeneous-Domain-Generalization-via-Domain-Mixup/blob/master/HETEROGENEOUS%20DOMAIN%20GENERALIZATION%20VIA%20DOMAIN%20MIXUP.pdf) can be found here.
 
+## Core Code
 ```python
 def mixall(x, y, beta=8, domain_num=6):
     '''Returns mixed inputs, pairs of targets, and lambda'''
@@ -27,7 +28,7 @@ def mixup_criterion(pred, lam, index_list, y, domain_num=6):
         loss += lam[i] * F.cross_entropy(pred, y[index_list[i]], reduction="none")
     return loss.mean()
 ```
-
+## Workflow
 The example steps are as follows:
 ```python
 for (x,y) in iterDomainBatch:
@@ -37,7 +38,18 @@ for (x,y) in iterDomainBatch:
     loss.backward()
     optimizer.step()
 ```
-Please cite our paper if you find it is useful.
+
+## Pretrained Model
+The pretrained resnet-18 model can be downloaded at https://drive.google.com/file/d/12wLIh29bhBWxQZnpUoJghS5LEGrlSDsM/view?usp=sharing
+
+```python
+from torchvison.models import resnet
+model = resnet.resnet18()
+para = torch.load('pretrained.pkt') # p[0] feature extractor p[1] classifier
+model.load_state_dict(para[0],strict=False)
+```
+
+### Please cite our paper if you find it is useful.
 
     @inproceedings{wang2020heterogeneous,
       title={Heterogeneous Domain Generalization Via Domain Mixup},
