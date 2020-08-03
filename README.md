@@ -3,7 +3,7 @@ The code release of paper 'Heterogeneous Domain Generalization via Domain Mixup'
 
 A **simple** but **effective** way to improve the heterogeneous domain generalization performance. The core code is as follows.
 
-The [paper](https://github.com/wyf0912/Heterogeneous-Domain-Generalization-via-Domain-Mixup/blob/master/HETEROGENEOUS%20DOMAIN%20GENERALIZATION%20VIA%20DOMAIN%20MIXUP.pdf) can be found here.
+The [paper](https://github.com/wyf0912/Heterogeneous-Domain-Generalization-via-Domain-Mixup/blob/master/HETEROGENEOUS%20DOMAIN%20GENERALIZATION%20VIA%20DOMAIN%20MIXUP.pdf) and [slide](https://github.com/wyf0912/Heterogeneous-Domain-Generalization-via-Domain-Mixup/blob/master/ICASSP%20PRESENTATION.pdf) can be found here.
 
 ## Core Code
 ```python
